@@ -14,3 +14,8 @@ I'm just trying figure out which way should I go in a big world of development. 
 - Python
 - Java, Kotlin
 
+## Code examples
+You can see some examples in my GitHub account:
+- [Candy delivery app (Yandex task)](https://github.com/kiselz/candy-delivery-app)
+- [Simple terminal games](https://github.com/kiselz/brain-games)
+
