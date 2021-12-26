@@ -20,5 +20,8 @@ You can see some examples in my GitHub account:
 - [Simple terminal games](https://github.com/kiselz/brain-games)
 
 ## Work experience
-- Worked in a team under an Android app at JetBrains ([Link](https://github.com/Aquatoriya/project_team_three))
+- Worked in a team under an Android app at JetBrains and in IT-School Samsung ([Link](https://github.com/Aquatoriya/project_team_three))
 
+## Education
+- Presidential Physics and Mathematics Lyceum №239 (2016 — 2020)
+- Ruhr-Universität Bochum (2020 — )
