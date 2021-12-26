@@ -19,3 +19,6 @@ You can see some examples in my GitHub account:
 - [Candy delivery app (Yandex task)](https://github.com/kiselz/candy-delivery-app)
 - [Simple terminal games](https://github.com/kiselz/brain-games)
 
+## Work experience
+- Worked in a team under an Android app at JetBrains ([Link](https://github.com/Aquatoriya/project_team_three))
+
