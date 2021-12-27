@@ -25,3 +25,7 @@ You can see some examples in my GitHub account:
 ## Education
 - Presidential Physics and Mathematics Lyceum №239 (2016 — 2020)
 - Ruhr-Universität Bochum (2020 — )
+
+## Languages
+- English: B2 (6.5 overall score in IELTS)
+- German: B2 (17 out of 20 points in TestDaF)
