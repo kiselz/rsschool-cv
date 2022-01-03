@@ -69,3 +69,7 @@ pre, .code {
     height: 400px;
     object-fit: contain;
 }
+
+.education-list {
+    list-style-type: none;
+}
