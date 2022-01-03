@@ -43,3 +43,7 @@ body {
     flex-direction: row;
     column-gap: 40px;
 }
+
+pre, .code {
+    text-align: justify;
+}
