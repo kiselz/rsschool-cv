@@ -47,3 +47,25 @@ body {
 pre, .code {
     text-align: justify;
 }
+
+.projects {
+    display: flex;
+    flex-direction: row;
+    column-gap: 40px;
+    flex-wrap: nowrap;
+}
+
+.project-link {
+    text-decoration: none;
+    color: black;
+}
+
+.project-card {
+    border: 2px solid black;
+}
+
+.project-card__img img {
+    width: 400px;
+    height: 400px;
+    object-fit: contain;
+}
