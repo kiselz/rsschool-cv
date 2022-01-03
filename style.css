@@ -74,10 +74,45 @@ a:hover {
     color: blueviolet;
 }
 
-.contact-list {
+.list {
     display: flex;
-    flex-direction: row;
-    column-gap: 40px;
+    flex-direction: column;
+    row-gap: 2.5rem;
+    text-align: left;
+}
+
+
+.icon-wrapper i {
+    font-size: 3rem;
+    vertical-align: bottom;
+}
+
+.list__link {
+    display: flex;
+    align-items: center;
+    border-radius: 4px;
+    overflow: hidden;
+    box-shadow: 2px 2px 2px 2px blueviolet;
+}
+
+.list__item:hover .icon-description {
+    color: blueviolet;
+}
+
+.icon-wrapper {
+    width: 200px;
+    text-align: center;
+    min-height: 100%;
+    background-color: blueviolet;
+    padding: 1rem;
+    color: white;
+    text-align: center;
+}
+
+.icon-description {
+    background-color: rgba(255,255,255,0.9);
+    flex-basis: 80%;
+    text-align: center;
 }
 
 pre, .code {
