@@ -4,9 +4,254 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <title>My CV</title>
+    <script src="https://kit.fontawesome.com/cc9887be0a.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
 </head>
 <body>
-    
+    <div class="container">
+        <header>
+            <nav class="nav-menu">
+                <ul class="nav-menu__list">
+                    <li class="nav-menu__item">
+                        <a href="#about-me">about me</a>    
+                    </li>
+                    <li class="nav-menu__item">
+                        <a href="#contacts">contact me</a>
+                    </li>
+                    <li class="nav-menu__item">
+                        <a href="#skills">skills</a>
+                    </li>
+                    <li class="nav-menu__item">
+                        <a href="#code">
+                            code example
+                        </a>
+                    </li>
+                    <li class="nav-menu__item">
+                        <a href="#projects">projects</a>
+                    </li>
+                    <li class="nav-menu__item">
+                        <a href="#education">education</a>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+        <main>
+            <section id="about-me" class="section">
+                <img src="images/I.jpg" alt="That's me">
+                <h1>&#128075;</h1>
+                <h2 id="name"><span class="emphasize">It's me,</span> Aleksandr Kiselev</h2>
+                <p>Bachelor student studying Computer Science</p>
+            </section>
+            
+            <section id="contacts" class="section">
+                <h2 class="section__header">Contacts</h2>
+                <ul class="list">
+                    <li class="list-link-wrapper">
+                        <a href="mailto:kiselevalexander23@gmail.com" class="list__link">
+                            <div class="icon-wrapper">
+                                <i class="fas fa-at fa-fw"></i>
+                            </div>
+                            <p class="icon-description">
+                                Email        
+                            </p>    
+                        </a>
+                    </li>
+
+                    <li class="list-link-wrapper">
+                        <a href="https://t.me/kiselbz" class="list__link" target="_blank">
+                            <div class="icon-wrapper">
+                                <i class="fab fa-telegram fa-fw"></i>
+                            </div>
+                            <p class="icon-description">
+                                Telegram        
+                            </p>    
+                        </a>
+                    </li>
+                </ul>
+            </section>
+
+            <section id="skills" class="section">
+                <h2 class="section__header">Skills</h2>
+                <ul class="list skills-list">
+                    <li class="list__item skills-list__item">
+                        <div class="icon-wrapper">
+                            <i class="fab fa-git"></i>
+                        </div>
+                        <p class="icon-description">
+                            Git        
+                        </p>    
+                    </li>
+
+                    <li class="list__item skills-list__item">
+                        <div class="icon-wrapper">
+                            <i class="fab fa-python"></i>
+                        </div>
+                        <p class="icon-description">
+                            Python        
+                        </p>    
+                    </li>
+
+                    <li class="list__item skills-list__item">
+                        <div class="icon-wrapper">
+                            <i class="fab fa-java"></i>
+                        </div>
+                        <p class="icon-description">
+                            Java        
+                        </p>    
+                    </li>
+
+                    <li class="list__item skills-list__item">
+                        <div class="icon-wrapper">
+                            <i class="fab fa-html5"></i>
+                        </div>
+                        <p class="icon-description">
+                            HTML        
+                        </p>    
+                    </li>
+
+                    <li class="list__item skills-list__item">
+                        <div class="icon-wrapper">
+                            <i class="fab fa-css3-alt"></i>
+                        </div>
+                        <p class="icon-description">
+                            CSS        
+                        </p>    
+                    </li>
+
+                    <li class="list__item skills-list__item">
+                        <div class="icon-wrapper">
+                            <i class="fab fa-js-square"></i>
+                        </div>
+                        <p class="icon-description">
+                            JavaScript        
+                        </p>    
+                    </li>
+
+                    <li class="list__item skills-list__item">
+                        <div class="icon-wrapper">
+                            <i class="fab fa-sass"></i>
+                        </div>
+                        <p class="icon-description">
+                            SASS        
+                        </p>    
+                    </li>
+
+                </ul>
+            </section>
+
+            <section id="code" class="section">
+                <h2 class="section__header">Code example</h2>
+                <pre>
+                    <code class="code">
+import argparse
+from .server.app import create_app
+from .server.app import register_blueprints
+from .database.db import init_db
+from .server.configurations import DevConfig
+from .server.configurations import ProdConfig
+from .server.configurations import TestConfig
+from waitress import serve
+
+
+HOST = '0.0.0.0'
+PORT = 5000
+
+parser = argparse.ArgumentParser(
+    description='Run server in different configurations'
+)
+configuration = parser.add_mutually_exclusive_group(required=True)
+configuration.add_argument('--dev',
+                            help='Development configuration',
+                            action='store_true')
+configuration.add_argument('--test',
+                            help='Test configuration',
+                            action='store_true')
+configuration.add_argument('--prod',
+                            help='Production configuration',
+                            action='store_true')
+
+args = parser.parse_args()
+
+app = None
+if args.dev:
+    app = create_app(DevConfig)
+elif args.test:
+    app = create_app(TestConfig)
+elif args.prod:
+    app = create_app(ProdConfig)
+
+with app.app_context():
+    init_db()
+
+register_blueprints(app)
+
+if args.prod:
+    serve(app, host=HOST, port=PORT)
+else:
+    app.run(host=HOST, port=PORT)                    
+                    </code>
+                </pre>
+            </section>
+            
+            <section id="projects" class="section">
+                <h2 class="section__header">Projects</h2>
+                <div class="projects">
+                    <a href="https://github.com/Aquatoriya/project_team_three" class="project-link" target="_blank">
+                        <div class="project-card">
+                            <div class="project-card__img">
+                                <img src="images/android.svg" alt="">
+                            </div>
+                            <div class="project-card__title">
+                                Android app
+                            </div>
+                        </div>
+                    </a>
+                    <a href="https://github.com/kiselz/brain-games" class="project-link" target="_blank">
+                        <div class="project-card">
+                            <div class="project-card__img">
+                                <img src="images/python.svg" alt="">
+                            </div>
+                            <div class="project-card__title">
+                                Simple terminal games
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </section>
+
+            <section id="education" class="section">
+                <h2 class="section__header">Education</h2>
+                <ul class="list education-list">
+                    <li class="education-list__item">English: <span class="emphasize">B2</span> (6.5 overall score in IELTS)</li>
+                    <li class="education-list__item">German: <span class="emphasize">B2</span> (17 points out of 20 in TestDaF)</li>
+                    <li class="education-list__item">Presidential Physics and Mathematics Lyceum №239 (2016 <span class="emphasize">—</span> 2020)</li>
+                    <li class="education-list__item">Ruhr-Universität Bochum (2020 <span class="emphasize">—</span> )</li>
+                </ul>
+            </section>
+        </main>
+        <footer>
+            <ul class="footer-links">
+                <li class="footer-link">
+                    <a href="https://github.com/kiselz" target="_blank">
+                        <i class="fab fa-github-square"></i>
+                    </a>
+                </li>
+                <li class="footer-link">
+                    <a href="https://rs.school/js/" target="_blank">
+                        <img src="https://rs.school/images/rs_school_js.svg" alt="Logo RS School">
+                    </a>
+                </li>
+                <li class="footer-link">
+                    <span>
+                        &copy; 2022
+                    </span>
+                </li>
+            </ul>
+        </footer>
+    </div>
 </body>
 </html>
