@@ -65,11 +65,28 @@ pre, .code {
 }
 
 .project-card__img img {
-    width: 400px;
-    height: 400px;
+    width: 200px;
+    height: 200px;
     object-fit: contain;
 }
 
 .education-list {
     list-style-type: none;
+}
+
+.footer-links {
+    list-style-type: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer-link img {
+    width: 200px;
+    object-fit: contain;
+}
+
+.footer-link i {
+    font-size: 4.625rem;
 }
