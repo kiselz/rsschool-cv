@@ -8,7 +8,8 @@ body {
     width: 100vw;
 }
 
-.nav-menu {
+.container {
+    width: 1200px;
     margin: 0 auto;
 }
 
@@ -17,4 +18,20 @@ body {
     display: flex;
     justify-content: center;
     column-gap: 40px;
+}
+
+.section {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+}
+
+#about-me h1 {
+    /* Force google chrome to render a color emoji */
+    font-weight: 100;
+}
+
+#about-me img {
+    width: 400px;
 }
