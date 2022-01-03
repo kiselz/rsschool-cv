@@ -35,3 +35,10 @@ body {
 #about-me img {
     width: 400px;
 }
+
+.contact-list {
+    list-style-type: none;
+    display: flex;
+    flex-direction: row;
+    column-gap: 40px;
+}
