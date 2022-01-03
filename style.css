@@ -172,10 +172,11 @@ pre:hover {
 }
 
 .footer-links {
+    margin-top: 5rem;
     list-style-type: none;
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: space-evenly;
     align-items: center;
 }
 
@@ -186,4 +187,10 @@ pre:hover {
 
 .footer-link i {
     font-size: 4.625rem;
+}
+
+@media screen and (max-width: 850px) {
+    html {
+        font-size: 12px;
+    }
 }
