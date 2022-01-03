@@ -134,7 +134,7 @@ pre, .code {
 pre {
     border: 2px solid blueviolet;
     padding: .75rem;
-    transition: box-shadow .5s ease-in-out;
+    transition: box-shadow .5s ease-out;
 }
 
 pre:hover {
@@ -144,18 +144,27 @@ pre:hover {
 .projects {
     display: flex;
     flex-direction: row;
-    column-gap: 40px;
+    column-gap: 3rem;
     flex-wrap: nowrap;
 }
 
 .project-card {
-    border: 2px solid black;
+    display: flex;
+    flex-direction: column;
+    box-shadow: rgba(137, 43, 226, 0.4) 0px 4px 16px, rgba(137, 43, 226, 0.4)  0px 8px 24px, rgba(137, 43, 226, 0.4)  0px 16px 56px;
+    width: 300px;
 }
 
 .project-card__img img {
     width: 200px;
     height: 200px;
     object-fit: contain;
+}
+
+.project-card__title {
+    background-color: blueviolet;
+    color: white;
+    padding: .5rem;
 }
 
 .footer-links {
